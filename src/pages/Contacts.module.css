@@ -1,6 +1,6 @@
 .contacts {
     padding: 60px 20px;
-    background-color: #f7f7f7;
+    background-color: var(--color-bg-alt);
   }
   
   .container {
@@ -12,13 +12,13 @@
   .title {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--color-primary);
   }
   
   .description {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    color: #555;
+    color: var(--color-text);
   }
   
   .content {
@@ -37,10 +37,10 @@
   
   .form {
     flex: 1;
-    background-color: #fff;
+    background-color: var(--color-bg);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: var(--color-card-shadow);
     text-align: left;
   }
   
@@ -53,20 +53,22 @@
   .formGroup label {
     margin-bottom: 8px;
     font-weight: bold;
-    color: #444;
+    color: var(--color-secondary);
   }
   
   .formGroup input,
   .formGroup textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border);
     border-radius: 4px;
     font-size: 1rem;
+    background: var(--color-bg-alt);
+    color: var(--color-text);
   }
   
   .button {
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: var(--color-primary);
     border: none;
     color: white;
     font-size: 1rem;
@@ -76,7 +78,7 @@
   }
   
   .button:hover {
-    background-color: #218838;
+    background-color: var(--color-accent);
   }
   
   .contactInfo {
@@ -87,12 +89,11 @@
   .contactInfo h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--color-primary);
   }
   
   .contactInfo p {
     font-size: 1rem;
-    color: #555;
+    color: var(--color-text);
     margin-bottom: 8px;
   }
-  

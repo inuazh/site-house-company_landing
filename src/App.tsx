@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -8,30 +8,12 @@ import About from './pages/About';
 import ServicesPage from './pages/Services';
 import Projects from './pages/Projects';
 import Contacts from './pages/Contacts';
-
-// Theme context
-const ThemeContext = createContext<{theme: string, toggleTheme: () => void}>({theme: 'light', toggleTheme: () => {}});
-
-export const useTheme = () => useContext(ThemeContext);
-
-const ThemeProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-  const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light');
-  return (
-    <ThemeContext.Provider value={{theme, toggleTheme}}>
-      {children}
-    </ThemeContext.Provider>
-  );
-};
+import { ThemeProvider } from './theme/ThemeProvider';
 
 const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div style={{ minHeight: '100vh', background: 'var(--color-bg)', color: 'var(--color-text)' }}>
           <Header />
           <div style={{

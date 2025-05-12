@@ -16,7 +16,7 @@
   --color-bg-alt: #23272a;
   --color-text: #f1f1f1;
   --color-primary: #4ade80;
-  --color-secondary: #222;
+  --color-secondary: #e0e0e0; /* было #222, стало светлым */
   --color-accent: #0ea5e9;
   --color-card-shadow: 0 2px 16px rgba(0,0,0,0.32);
   --color-border: #333;

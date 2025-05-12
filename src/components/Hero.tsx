@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
         loop
         playsInline
       >
-        <source src="../../public/videos/house.mp4" type="video/mp4" />
+        <source src="/videos/house.mp4" type="video/mp4" />
         Ваш браузер не поддерживает воспроизведение видео.
       </video>
       <div className={styles.overlay}></div>

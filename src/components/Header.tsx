@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
-import { useTheme } from '../App';
+import { useTheme } from '../theme/ThemeProvider';
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();

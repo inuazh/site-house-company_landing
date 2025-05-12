@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 18px 0;
-  background: var(--color-secondary);
-  color: var(--color-text);
+  background: #fff; /* светлая тема: белый фон */
+  color: #222;      /* светлая тема: тёмный текст */
   border-bottom: 1.5px solid var(--color-border);
   position: sticky;
   top: 0;
@@ -27,7 +27,7 @@
 
 .navItem {
   text-decoration: none;
-  color: var(--color-text);
+  color: #222; /* светлая тема: тёмный текст */
   font-size: 1.08rem;
   font-weight: 500;
   padding: 6px 12px;
@@ -56,4 +56,18 @@
 .themeToggle:hover {
   color: var(--color-accent);
   transform: scale(1.15);
+}
+
+[data-theme="dark"] .header {
+  background: #181a1b;
+  color: #f1f1f1;
+}
+
+[data-theme="dark"] .navItem {
+  color: #f1f1f1;
+}
+
+[data-theme="dark"] .navItem:hover {
+  background: var(--color-primary);
+  color: #181a1b;
 }
