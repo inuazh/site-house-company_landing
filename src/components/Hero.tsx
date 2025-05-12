@@ -16,8 +16,13 @@ const Hero: React.FC = () => {
       </video>
       <div className={styles.overlay}></div>
       <div className={styles.content}>
-        <h1>Строим по новым правилам</h1>
-        <p>Непревзойдённое качество, умные решения для вашего дома</p>
+        <h1 className={styles.heading}>Строим по новым правилам</h1>
+        <p className={styles.subheading}>Непревзойдённое качество, умные решения для вашего дома</p>
+        <div className={styles.features}>
+          <span>✔ Умные системы</span>
+          <span>✔ Энергоэффективность</span>
+          <span>✔ Индивидуальный подход</span>
+        </div>
         <button className={styles.button}>Узнать больше</button>
       </div>
     </section>

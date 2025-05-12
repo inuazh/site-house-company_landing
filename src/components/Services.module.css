@@ -1,19 +1,26 @@
 .services {
-    padding: 60px 20px;
-    background-color: #f4f4f4;
+    padding: 60px 0 40px 0;
+    background-color: var(--color-bg-alt);
     text-align: center;
+    border-radius: 18px;
+    box-shadow: var(--color-card-shadow);
+    margin-bottom: 32px;
+    transition: background var(--transition), color var(--transition);
   }
   
   .title {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #333;
+    color: var(--color-primary);
+    font-weight: 700;
+    letter-spacing: 1px;
   }
   
   .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
+    justify-items: center;
   }
   
   @media (min-width: 768px) {
@@ -23,25 +30,42 @@
   }
   
   .card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-bg);
+    padding: 28px 20px;
+    border-radius: 14px;
+    transition: box-shadow var(--transition), transform var(--transition), background var(--transition);
+    box-shadow: var(--color-card-shadow);
+    min-width: 220px;
+    min-height: 140px;
+    animation: fadeInUp 0.5s both;
   }
   
   .card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 32px rgba(40, 174, 69, 0.12);
+    transform: translateY(-6px) scale(1.03);
+    background: var(--color-bg-alt);
   }
   
   .cardTitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 10px;
-    color: #222;
+    color: var(--color-secondary);
+    font-weight: 600;
   }
   
   .cardDesc {
     font-size: 1rem;
-    color: #555;
+    color: var(--color-text);
+    opacity: 0.85;
   }
-  
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
