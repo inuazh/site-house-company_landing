@@ -97,3 +97,97 @@
     color: var(--color-text);
     margin-bottom: 8px;
   }
+  
+  .contactsIntro {
+    font-size: 1.13rem;
+    margin-bottom: 28px;
+    color: var(--color-text);
+    opacity: 0.92;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .formNote {
+    margin-top: 10px;
+    color: var(--color-secondary);
+    font-size: 0.98rem;
+    opacity: 0.8;
+    text-align: left;
+  }
+  
+  .contactNote {
+    margin-top: 10px;
+    color: var(--color-primary);
+    font-size: 0.98rem;
+    opacity: 0.85;
+  }
+  
+  .contactsExtra {
+    margin-top: 38px;
+    background: var(--color-bg);
+    border-radius: 12px;
+    padding: 28px 18px;
+    box-shadow: var(--color-card-shadow);
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 0.7s both;
+  }
+  
+  .contactsExtra h3 {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+  }
+  
+  .contactsExtra p {
+    font-size: 1.05rem;
+    color: var(--color-text);
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .contacts {
+      padding: 24px 4px;
+    }
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+    .description {
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+    .content {
+      gap: 14px;
+    }
+    .form {
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .formGroup {
+      margin-bottom: 12px;
+    }
+    .formGroup label {
+      font-size: 0.98rem;
+    }
+    .formGroup input,
+    .formGroup textarea {
+      font-size: 0.98rem;
+      padding: 7px;
+    }
+    .button {
+      padding: 8px 14px;
+      font-size: 0.98rem;
+      border-radius: 3px;
+    }
+    .contactInfo h2 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .contactInfo p {
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+    }
+  }

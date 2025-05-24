@@ -13,7 +13,7 @@ import { ThemeProvider } from './theme/ThemeProvider';
 const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename={import.meta.env.BASE_URL}>
         <div style={{ minHeight: '100vh', background: 'var(--color-bg)', color: 'var(--color-text)' }}>
           <Header />
           <div style={{

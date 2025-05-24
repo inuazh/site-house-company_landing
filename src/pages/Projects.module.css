@@ -113,6 +113,39 @@
     margin-bottom: 8px;
   }
 
+  .sectionBlock {
+    margin-bottom: 48px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 18px;
+    text-align: left;
+  }
+
+  .status {
+    display: inline-block;
+    font-size: 0.98rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    padding: 2px 10px;
+    border-radius: 8px;
+    margin-right: 8px;
+  }
+
+  .statusDone {
+    background: #e6f9ed;
+    color: #28a745;
+    border: 1px solid #b6eacb;
+  }
+
+  .statusInProgress {
+    background: #fffbe6;
+    color: #e6a100;
+    border: 1px solid #ffe6a1;
+  }
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -122,4 +155,104 @@
       opacity: 1;
       transform: none;
     }
+  }
+
+  @media (max-width: 600px) {
+    .projects {
+      padding: 24px 0 14px 0;
+      border-radius: 10px;
+      margin-bottom: 18px;
+    }
+    .container {
+      padding: 0 4px;
+    }
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+    .description {
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+    .grid {
+      gap: 10px;
+    }
+    .card {
+      min-width: 0;
+    }
+    .cardImage {
+      height: 110px;
+    }
+    .cardTitle {
+      font-size: 1rem;
+    }
+    .cardDesc {
+      font-size: 0.95rem;
+    }
+    .extraSection {
+      padding: 14px 6px;
+      margin-top: 24px;
+      border-radius: 8px;
+    }
+    .extraSection h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    .extraSection ol {
+      font-size: 0.98rem;
+    }
+    .sectionTitle {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  .projectsIntro {
+    font-size: 1.13rem;
+    margin-bottom: 28px;
+    color: var(--color-text);
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+
+  .cardNote {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    opacity: 0.85;
+  }
+
+  .projectsQuote {
+    font-size: 1.05rem;
+    color: var(--color-accent);
+    font-style: italic;
+    border-left: 4px solid var(--color-accent);
+    padding-left: 14px;
+    margin: 0;
+    background: rgba(0,0,0,0.03);
+  }
+
+  .projectsExtra {
+    margin-top: 38px;
+    background: var(--color-bg);
+    border-radius: 12px;
+    padding: 28px 18px;
+    box-shadow: var(--color-card-shadow);
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 0.7s both;
+  }
+
+  .projectsExtra h3 {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+  }
+
+  .projectsExtra p {
+    font-size: 1.05rem;
+    color: var(--color-text);
+    margin-bottom: 10px;
   }
