@@ -2,6 +2,11 @@ import React from 'react';
 import styles from './Hero.module.css';
 
 const Hero: React.FC = () => {
+  const videoSrc = `${import.meta.env.BASE_URL}videos/house.mp4`;
+
+  console.log('BASE_URL:', import.meta.env.BASE_URL);
+  console.log('Video src:', videoSrc);
+
   return (
     <section className={styles.hero}>
       <video
@@ -11,7 +16,7 @@ const Hero: React.FC = () => {
         loop
         playsInline
       >
-        <source src={`${import.meta.env.BASE_URL}videos/house.mp4`} type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
         Ваш браузер не поддерживает воспроизведение видео.
       </video>
       <div className={styles.overlay}></div>

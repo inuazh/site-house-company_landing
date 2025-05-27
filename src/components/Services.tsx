@@ -15,46 +15,47 @@ const servicesData: ServiceItem[] = [
     description: 'Проектирование, возведение и отделка под ключ.',
     details: 'Мы реализуем проекты любой сложности: от уютных коттеджей до современных вилл. Используем только проверенные материалы и современные технологии.',
     note: 'Ваша мечта о собственном доме — в надёжных руках.',
-    imageUrl: '/images/services/building.jpg',
+    imageUrl: 'images/services/building.jpg',
   },
   {
     title: 'Умные системы',
     description: 'Интегрируем IoT-технологии, системы безопасности, автоматизацию.',
     details: 'Автоматизация освещения, климат-контроль, видеонаблюдение и многое другое — всё для вашего комфорта и безопасности.',
     note: 'Управляйте домом с любого устройства, где бы вы ни находились.',
-    imageUrl: '/images/services/smart.jpg',
+    imageUrl: 'images/services/smart.jpg',
   },
   {
     title: 'Ландшафтные работы',
     description: 'Полный комплекс по благоустройству территории.',
     details: 'Дизайн, озеленение, устройство дорожек, установка систем автополива и освещения. Ваш участок станет настоящим оазисом.',
     note: 'Красота и функциональность — в каждом уголке вашего двора.',
-    imageUrl: '/images/services/landscape.jpg',
+    imageUrl: 'images/services/landscape.jpg',
   },
   {
     title: 'Дизайн интерьера',
     description: 'Современные решения для уюта и стиля вашего дома.',
     details: 'Создаём уникальные интерьеры, учитывая ваши пожелания и современные тренды. Работаем с лучшими дизайнерами.',
     note: 'Вдохновляющее пространство для жизни и творчества.',
-    imageUrl: '/images/services/interior.jpg',
+    imageUrl: 'images/services/interior.webp',
   },
   {
     title: 'Энергоэффективность',
     description: 'Внедрение технологий для экономии ресурсов и заботы об экологии.',
     details: 'Солнечные панели, теплоизоляция, системы рекуперации — всё для снижения расходов и заботы о природе.',
     note: 'Экономьте ресурсы — заботьтесь о будущем.',
-    imageUrl: '/images/services/eco.jpg',
+    imageUrl: 'images/services/eco.webp',
   },
   {
     title: 'Сервис и поддержка',
     description: 'Гарантийное и постгарантийное обслуживание, консультации.',
     details: 'Мы всегда на связи: регулярное обслуживание, быстрый выезд специалистов, индивидуальные консультации.',
     note: 'Ваш дом — под нашей защитой.',
-    imageUrl: '/images/services/support.jpg',
+    imageUrl: 'images/services/support.webp',
   },
 ];
 
 const Services: React.FC = () => {
+  const baseUrl = import.meta.env.BASE_URL;
   return (
     <section className={styles.services}>
       <h2 className={styles.title}>Наши услуги</h2>
@@ -66,7 +67,7 @@ const Services: React.FC = () => {
         {servicesData.map((service, index) => (
           <div key={index} className={styles.card} style={{animationDelay: `${index * 0.07}s`}}>
             <img
-              src={service.imageUrl}
+              src={baseUrl + service.imageUrl}
               alt={service.title}
               className={styles.cardImage}
               loading="lazy"
